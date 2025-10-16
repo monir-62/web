@@ -1,1 +1,47 @@
+without table
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="s.css">
+    </head>
+    <body>
+       <form action="action">
+        <div>
+            <label for="nam"> your name</label>
+            <input type="text" id="nam" placeholder="Enter name">
+        </div>
+        <div>
+            Choose your gender
+            <input type="radio" id="a" name="Sex" value="male" >
+            <label for="a">Male</label> <!--if male is selected,sex=male in url-->
+            <input type="radio" id="b" name="Sex" value="female" checked>
+            <label for="b">Female</label>
+        </div>
+        <div>
+            Choose your hobbies
+            <input type="checkbox" id="a" name="Game" value="football" >
+            <label for="a">Football</label> <!--if male is selected,sex=male in url-->
+            <input type="checkbox" id="b" name="Game" value="cricket" >
+            <label for="b">Cricket</label>
+        </div>
+        <div>
+            Enter your thing
+            <select id="prof">
+                <option value="stu">Student</option>
+                <option value="stu">Teacher</option>
+            </select>
+        </div>
+        <div>
+            <label for="c">Enter</label>
+            <textarea placeholder="Enter your comment" id="c" name="comment" rows="2" cols="20"></textarea>
 
+        </div>
+        <div>
+          <input type="range" max="50" min="10" value="20">
+        </div>
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+       </form>
+    </body>
+</html>
