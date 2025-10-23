@@ -1,0 +1,129 @@
+grid assignment 1
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS</title>
+    <link rel="stylesheet" href="s.css" />
+  </head>
+  <body>
+    <div id="abc">
+        <div class="a">Header</div>
+        <div class="b">Navigation</div>
+        <div class="c">Sidebar</div>
+        <div class="d">Main</div>
+        <div class="e">Ads</div>
+        <div class="f">Footer</div>
+    </div>
+  </body>
+</html>
+
+css 
+
+#abc{
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: repeat(12,1fr);
+    grid-gap: 10px;
+}
+.a{
+    grid-row: 1/span 1;
+    grid-column: 1/span 12;
+    background-color: aqua;
+}
+.c{
+    grid-row: 2/12;
+    grid-column: 1/4;
+    background-color: aquamarine;
+}
+.b{
+    background-color: antiquewhite;
+    grid-row:2/3;
+    grid-column: 4/10;
+}
+.d{
+    background-color: cadetblue;
+    grid-row: 3/12;
+    grid-column: 4/10;
+}
+.e{
+    background-color: brown;
+    grid-row: 2/12;
+    grid-column: 10/13;
+}
+.f{
+    grid-row: 12/13;
+    grid-column: 1/13;
+    background-color: aqua;
+}
+
+assignment 2
+
+@media (max-width:720px){
+    #abc{
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: repeat(12,1fr);
+    grid-gap: 10px;
+}
+#abc div{
+    background-color: palevioletred;
+}
+.a{
+    grid-row: 1/2;
+    grid-column: 1/13;
+
+}
+.c{
+    grid-row: 3/12;
+    grid-column: 1/4;
+
+}
+.b{
+
+    grid-row:2/3;
+    grid-column: 1/13;
+}
+.d{
+
+    grid-row: 3/12;
+    grid-column: 4/13;
+}
+.e{
+
+    grid-row: 12/13;
+    grid-column: 1/4;
+}
+.f{
+    grid-row: 12/13;
+    grid-column: 4/13;
+
+}
+} with previous
+
+new loader
+
+.loader{
+    height: 120px;
+    width: 120px;
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid goldenrod;
+    border-radius: 50%;
+    animation: spin 2s linear infinite;
+}
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
