@@ -1,0 +1,193 @@
+html part
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="s.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="main_box">
+      <input type="checkbox" id="check" />
+      <div class="btn_one">
+        <label for="check">
+          <i class="fa-solid fa-bars"></i>
+        </label>
+      </div>
+
+      <div class="sidebar_menu">
+        <div class="logo">
+          <a href="#">Apna College</a>
+        </div>
+
+        <div class="btn_two">
+          <label for="check">
+            <i class="fa-solid fa-xmark"></i>
+          </label>
+        </div>
+        <div class="menu">
+          <ul>
+            <li>
+              <i class="fa-solid fa-image"></i>
+              <a href="#">Gallery</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              <a href="#">Shortcuts</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-photo-film"></i>
+              <a href="#">Exhibits</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-calendar-days"></i>
+              <a href="#">Events</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-store"></i>
+              <a href="#">Store</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-phone"></i>
+              <a href="#">Contact</a>
+            </li>
+            <li>
+              <i class="fa-regular fa-comments"></i>
+              <a href="#">Feedback</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="social_media">
+          <ul>
+            <a href="#"><i class="fa-brands fa-facebook"></i></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+css part
+*{
+    margin: 0;
+    padding: 0;
+    font-family: poppins;
+}
+.main_box{
+    background-image: url("photo.jpg");
+    background-size: cover;
+    height: 100vh;
+}
+.main_box .btn_one i{
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    left: 16px;
+    font-weight: 700px;
+    line-height: 60px;
+}
+.btn_one i:hover{
+    font-size: 40px;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+.btn_two{
+    position: absolute;
+    color: grey;
+    right: 10px;
+    top: 10px;
+    font-size: 20px;
+}
+.btn_two i:hover{
+    cursor: pointer;
+    font-size: 25px;
+    transition: all 0.3s linear;
+}
+.sidebar_menu{
+    position: fixed;
+    left: -500px;
+    background-color: rgba(255,255,255,0.1);
+    box-shadow: 0 0 4px rgba(255,255,255,0.5);
+    width: 300px;
+    height: 100vh;
+    transition: all 0.3s linear;
+}
+.sidebar_menu .logo{
+    position: absolute;
+    width: 100%;
+    line-height: 60px;
+    box-shadow: 0 0 6px rgba(255,255,255,0.5);
+    height: 60px;
+}
+.sidebar_menu .logo a{
+    position: absolute;
+    left: 40px;
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    
+}
+.sidebar_menu .menu{
+    position: absolute;
+    color: white;
+    top: 60px;
+    width: 100%;
+}
+.sidebar_menu .menu li{
+    padding: 10px 20px;
+    margin-top: 10px;
+} 
+.sidebar_menu .menu li:hover{
+    box-shadow: 0 0 4px rgba(255,255,255,0.5);
+}
+.sidebar_menu .menu i,a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+.sidebar_menu .menu li a{
+    padding-left: 10px;
+}
+.social_media{
+    position: absolute;
+    bottom: 50px;
+    left: 25%;
+}
+.social_media i{
+    color:white;
+    opacity: 0.5;
+    padding: 0 5px;
+    trasition: font-size 2s linear ;
+}
+.social_media i:hover{
+    transform: scale(1.5);
+    opacity: 1;
+}
+#check{
+    display: none;
+}
+#check:checked ~ .btn_one i{
+    opacity: 0;
+}
+#check:checked ~ .sidebar_menu{
+    left: 0px;
+}
+.abc{
+    width: 300px;
+}
