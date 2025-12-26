@@ -32,3 +32,27 @@ while(true){
 }
 
 3.num=Math.floor(num/10);//to avoid decimal floating count unexpected times of number, satisfies num>0 properly
+
+4.Number guess game 1 to Max
+let max=Math.floor(Math.random()*10)+1;//I would take maximum number  from the used using prompt to a different named varibale
+let f=0;//in 10's place i would replace it with Max
+let abc=prompt("Enter your number: ");
+while(true && abc != "quit"){
+    if(max==abc){
+        console.log("you guessed correctly");
+        f=1;
+        break;
+    }
+    // if(abc<max){//to give hint,without it ,it works without any issue
+    //     abc=prompt("You guessed small!Enter again: ");
+    // }
+    // else{
+    //     abc=prompt("You guessed large!Enter again: ");
+    // }
+}
+if(f){
+    console.log("Congrastulations");
+}
+else{
+    console.log("You have quited,better luck next time");
+}
